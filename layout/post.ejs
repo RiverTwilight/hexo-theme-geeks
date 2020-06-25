@@ -1,0 +1,43 @@
+<div class="">
+    <article class="uk-article">
+        <h1 class="uk-article-title">
+            <a class="uk-link-reset" href=""><%- page.title %></a>
+        </h1>
+        <p class="uk-article-meta"><%- config.author %>更新于<%- date(page.date, 'YYYY/M/D') %></p>
+
+        <ul class="uk-comment-list">
+            <li>
+                <article class="uk-comment uk-visible-toggle" tabindex="-1">
+                    <header class="uk-comment-header uk-position-relative">
+                        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-comment-avatar" src="/images/avatar.jpg" width="80" height="80"
+                                    alt="江村暮">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">作者</a>
+                                </h4>
+                                <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset"
+                                        href="#">高一/全栈/自行车/漫画</a></p>
+                            </div>
+                        </div>
+                        <div class="uk-position-top-right uk-position-small">
+                            <a href="https://twitter.com/renjie_wong" uk-icon="icon: twitter"></a>
+                            <a href="https://github.com/RiverTwilight" uk-icon="icon: github"></a>
+                            <a href="mailto: admin@yungeeker.com" title="Email" uk-icon="icon: mail"></a>
+                        </div>
+                    </header>
+                </article>
+            </li>
+        </ul>
+
+        <%- page.content %>
+
+    </article>
+
+    <script>
+        window.onload = () => {
+            UIkit.lightbox(document.getElementsByTagName('a'));
+        }
+    </script>
+</div>
